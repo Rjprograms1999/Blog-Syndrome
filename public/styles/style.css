@@ -1,0 +1,107 @@
+body {
+  background-color: #eeeeee;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+header {
+  background-color: #222831;
+  color: #eeeeee;
+}
+
+.link-body-emphasis {
+  /* Prevents text selection */
+  color: inherit; /* Keeps color same on hover */
+}
+
+.nav-link {
+  color: #eeeeee;
+}
+
+.nav-link:hover {
+  color: #00adb5; /* Replace this with your desired hover color */
+}
+
+hr {
+  background-color: #222831;
+}
+.blogPostCard {
+  background-color: #393e46;
+  color: #eeeeee;
+}
+.featPosts {
+  background-color: #393e46;
+  color: #eeeeee;
+}
+.createBtn {
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.btn {
+  background-color: #393e46;
+  color: #eeeeee;
+}
+.btn:hover {
+  background-color: #393e46;
+  color: #00adb5;
+}
+
+.featPostsHeading {
+  padding: 1rem;
+}
+
+.card {
+  width: 100%;
+  background-color: #393e46;
+  color: #eeeeee;
+  padding: 2rem;
+}
+
+.card-img {
+  height: 20rem;
+}
+
+.bd-placeholder-img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  object-fit: fill;
+}
+
+#featPostAuthor,
+#featPostDate {
+  display: inline;
+  margin-right: 5px;
+  text-align: end;
+}
+
+#featPostAuthor {
+  font-weight: 500;
+}
+
+#featPostDate {
+  font-style: italic;
+}
+
+.delBtn,
+.editBtn {
+  background: none;
+  border: none;
+  padding: 6px;
+  float: right;
+}
+
+.containerMyPosts {
+  display: flex;
+}
+
+.containerMyPosts h3 {
+  flex-grow: 1;
+}
+
+footer {
+  background-color: #222831;
+  color: #eeeeee;
+}
