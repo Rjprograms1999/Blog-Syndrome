@@ -9,9 +9,6 @@ const app = express();
 const port = 3000;
 app.use(bodyParser.urlencoded({ extended: true })); //inorder to parse the body into strings and understandable form
 
-// use multer to handle image/file uploads
-const upload = multer({ dest: "public/uploads" });
-
 // declaring blogposts array where every post will be stored
 const blogPosts = [];
 
@@ -66,6 +63,9 @@ const today = new Date().toLocaleDateString("en-US", { month: "short", day: "num
 
 // app.use(express.static(path.join(__dirname, "/public")));
 app.use(express.static("public"));
+
+// use multer to handle image/file uploads
+const upload = multer({ dest: "public/uploads" });
 
 app.get("/home", (req, res) => {
   //  navigate to home.ejs
@@ -123,7 +123,6 @@ app.post("/publish", upload.single("image"), (req, res) => {
   }
 
   blogPosts.push(blogPost);
-  // console.log("File info:", file);
 
   res.redirect("/home");
 });

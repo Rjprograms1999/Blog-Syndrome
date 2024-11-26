@@ -1,7 +1,7 @@
 <%- include("partials/header.ejs") %>
 
-<div class="mb-3 d-flex gap-5">
-  <div class="blogPosts col-md-8 themed-grid-col">
+<div class="mb-3 d-flex flex-wrap flex-lg-nowrap gap-5">
+  <div class="flex-grow-1 blogPosts col-md-8 themed-grid-col ">
     <h1>Blog Posts</h1>
     <hr />
 
@@ -18,9 +18,9 @@
           <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
         </a>
       </div>
-      <div class="col-auto d-none d-lg-block">
+      <div class="col-12 col-md-auto">
         <% if (post.image) { %>
-        <img class="bd-placeholder-img" src="uploads/<%= post.image.filename %>" alt="<%= post.image.originalname %>" />
+        <img class="bd-placeholder-img img-fluid w-100 " src="uploads/<%= post.image.filename %>" alt="<%= post.image.originalname %>" />
         <% } %>
       </div>
     </div>
@@ -29,13 +29,13 @@
     <p>No blog posts available.</p>
     <% } %>
 
-    <div style="text-align: center">
-      <a href="/createPost" class="icon-link gap-1 icon-link-hover">Create a new post</a>
+    <div class="text-center fs-4">
+      <a href="/createPost" class="mt-5 icon-link gap-1 icon-link-hover">Create a new post</a>
     </div>
   </div>
 
-  <div class="featPosts col-md-4 themed-grid-col text-center">
-    <h2 class="featPostsHeading">Featured Posts</h2>
+  <div class="featPosts flex-grow-1 col-md-4 themed-grid-col ">
+    <h2 class="featPostsHeading text-center">Featured Posts</h2>
     <hr />
     <% featPosts.posts.forEach(function (post) { %>
     <div class="card">
