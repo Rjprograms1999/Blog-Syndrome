@@ -1,14 +1,14 @@
 <%- include("partials/header.ejs") %>
 
 <div class="mb-3 d-flex flex-wrap flex-lg-nowrap gap-5">
-  <div class="flex-grow-1 blogPosts col-md-8 themed-grid-col ">
+  <div class="flex-grow-1 blogPosts col-md-8 ">
     <h1>Blog Posts</h1>
     <hr />
 
     <% if (posts.length > 0) { %> <% posts.forEach (function (post) { %>
 
-    <div class="blogPostCard row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-      <div class="col p-4 d-flex flex-column position-static">
+    <div class="blogPostCard row g-0 border rounded flex-md-row mb-4 shadow-sm ">
+      <div class="col p-4 d-flex flex-column">
         <h3 class="mb-0"><%= post.title %></h3>
         <h6 class="d-inline mt-2 mb-1 text-primary-emphasis"><%= post.author + " |" %></h6>
         <div class="mb-3 text-white fw-light fst-italic"><%= date %></div>
@@ -18,7 +18,7 @@
           <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
         </a>
       </div>
-      <div class="col-12 col-md-auto">
+      <div class="col-md-auto">
         <% if (post.image) { %>
         <img class="bd-placeholder-img img-fluid w-100 " src="uploads/<%= post.image.filename %>" alt="<%= post.image.originalname %>" />
         <% } %>
@@ -34,12 +34,12 @@
     </div>
   </div>
 
-  <div class="featPosts flex-grow-1 col-md-4 themed-grid-col ">
+  <div class="featPosts flex-grow-1 col-md-4  ">
     <h2 class="featPostsHeading text-center">Featured Posts</h2>
-    <hr />
+    
     <% featPosts.posts.forEach(function (post) { %>
-    <div class="card">
-      <img src="<%= post.image %> " class="card-img" alt="featured-image" />
+    <div class="featPostCard card">
+      <img src="<%= post.image %> " class="card-img" alt="featured-images" />
       <div class="card-body">
         <h5 class="card-title"><%= post.title %></h5>
         <p class="card-text"><%= post.content.substring(0,100) + "... " %><a class="icon-link gap-1 icon-link-hover" href="posts/ <%= post.title %>"> More</a></p>

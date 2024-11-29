@@ -3,16 +3,14 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 2rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
   background-color: #222831;
   color: #eeeeee;
-}
-
-.link-body-emphasis {
-  /* Prevents text selection */
-  color: inherit; /* Keeps color same on hover */
 }
 
 .nav-link {
@@ -53,15 +51,11 @@ hr {
   padding: 1rem;
 }
 
-.card {
+.featPostCard {
   width: 100%;
   background-color: #393e46;
   color: #eeeeee;
   padding: 2rem;
-}
-
-.card-img {
-  height: 20rem;
 }
 
 .bd-placeholder-img {
@@ -73,8 +67,6 @@ hr {
 
 #featPostAuthor,
 #featPostDate {
-  display: inline;
-  margin-right: 5px;
   text-align: end;
 }
 
@@ -90,16 +82,6 @@ hr {
 .editBtn {
   background: none;
   border: none;
-  padding: 6px;
-  float: right;
-}
-
-.containerMyPosts {
-  display: flex;
-}
-
-.containerMyPosts h3 {
-  flex-grow: 1;
 }
 
 footer {

@@ -2,16 +2,14 @@
 
 <h1>Published Posts</h1>
 
-<% if (blogPosts.length > 0) { %> 
-  
-<% blogPosts.forEach (function (post, index) { %>
+<% if (blogPosts.length > 0) { %> <% blogPosts.forEach (function (post, index) { %>
 
-<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-  <div class="col p-4 d-flex flex-column position-static">
+<div class="row g-0 border rounded mb-4 shadow-sm h-md-250 ">
+  <div class="col p-4 d-flex flex-column ">
     <!-- Container for title and buttons, aligned horizontally -->
-    <div class="containerMyPosts">
+    <div class="d-flex">
       <!-- Post Title -->
-      <h3 class="mb-0"><%= post.title %></h3>
+      <h3 class="mb-0 flex-grow-1"><%= post.title %></h3>
 
       <!-- Delete Post Form -->
       <form id="deleteForm" action="/delete-post" method="POST">
@@ -24,7 +22,7 @@
         </button>
       </form>
 
-      <!-- Edit Button -->
+      <!-- Edit Button  -->
       <button type="button" onclick="window.location.href='/editPost?id=<%= index %>';" class="editBtn">
         <!-- Pencil Icon SVG -->
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">

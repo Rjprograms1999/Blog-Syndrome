@@ -4,27 +4,23 @@
 <hr />
 
 <form action="/edit-post" method="POST" enctype="multipart/form-data">
-
   <div class="form-group">
     <input type="hidden" name="postIndex" value="<%= postIndex %>" />
     <label for="title">Title:</label>
-    <input class="form-control" type="text" id="title" name="title" value="<%= post.title %>" required /> 
-  
+    <input class="form-control" type="text" id="title" name="title" value="<%= post.title %>" required />
+
     <label for="content">Content:</label><br />
-    <textarea class="form-control" id="content" name="content" rows="8" required><%= post.content %></textarea> 
-  
+    <textarea class="form-control" id="content" name="content" rows="8" required><%= post.content %></textarea>
+
     <label for="author">Author Name:</label>
-    <input class="form-control mb-3" type="text" id="author" name="author" value="<%= post.author %>" required /> 
-  
+    <input class="form-control mb-3" type="text" id="author" name="author" value="<%= post.author %>" required />
+
     <label for="image">Image (Optional):</label>
-    <input class="form-control-file mb-3" type="file" id="image" name="image" /> 
-  
-    
+    <input class="form-control-file mb-3" type="file" id="image" name="image" />
   </div>
 
-  <button class="btn mb-3" type="submit" >Save Changes</button>
-    <button  class="btn mb-3" href="/home" >Cancel</button>
-  
+  <button class="btn mb-3" type="submit">Save Changes</button>
+  <button class="btn mb-3" href="/home">Cancel</button>
 </form>
 
 <%- include('partials/footer.ejs') %>
